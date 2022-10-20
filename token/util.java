@@ -35,4 +35,14 @@ public class util {
         put("INTEGER_CONST",TK.INTEGER_CONST);
         put("EOF",TK.EOF);
     }};
+    public static boolean isId1(char ch){
+        return Character.isLetter(ch)||ch=='_';
+    }
+    public static boolean isId2(char ch){
+        return isId1(ch)||Character.isDigit(ch);
+    }
+    public static boolean isSinglePunctuation(char ch){
+        String p="!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\"";
+        return p.contains(String.valueOf(ch));
+    }
 }
