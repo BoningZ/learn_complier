@@ -12,4 +12,8 @@ public class Token {
         this.col = col;
         this.width = width;
     }
+    public String toString(){
+        if(type==TK.EOF)return "[<EOF>]";
+        return String.format("[<%s,%s>@(%d:%d) w:%d]",type.toString(),val.toString(),line,col,width);
+    }
 }
