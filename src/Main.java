@@ -20,10 +20,10 @@ public class Main {
         String len;
         while ((len=br.readLine())!=null){
             lines.add(len);
-            text+=len+'\n';
+            text+=len+'\n';//Java readLine不包含行位换行符
         }
         Lexer lexer=new Lexer(text);
-        ArrayList<Token> tokens=lexer.gatherAllTokens();
-        for(Token t:tokens) System.out.println(t);
+        ArrayList<Token> tokens=lexer.gatherAllTokens();//测试词法
+        for(Token t:tokens) System.out.println(t);//测试词法
     }
 }
