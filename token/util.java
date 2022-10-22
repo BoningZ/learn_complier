@@ -24,6 +24,7 @@ public class util {
         put("]",TK.RBRACKET);
         put(",",TK.COMMA);
         put(";",TK.SEMICOLON);
+        put("=",TK.ASSIGN);
 
         put("return",TK.RETURN);
         put("if",TK.IF);
