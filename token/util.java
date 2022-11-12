@@ -24,7 +24,7 @@ public class util {
         put("]",TK.RBRACKET);
         put(",",TK.COMMA);
         put(";",TK.SEMICOLON);
-        put("=",TK.ASSIGN);
+
 
         put("return",TK.RETURN);
         put("if",TK.IF);
@@ -34,10 +34,11 @@ public class util {
 
         put("ID",TK.ID);
         put("INTEGER_CONST",TK.INTEGER_CONST);
+        put("=",TK.ASSIGN);
         put("EOF",TK.EOF);
     }};
     public static boolean isId1(char ch){//标识符的第一位，字母或下划线
-        return Character.isLetter(ch)||ch=='_';
+        return Character.isLetter(ch)||ch=='_';//汉字也是letter
     }
     public static boolean isId2(char ch){//标识符之后的位，可以是数字
         return isId1(ch)||Character.isDigit(ch);
