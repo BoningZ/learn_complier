@@ -3,8 +3,9 @@ package ast;
 import token.Token;
 
 public class NumNode extends ASTNode{
-    Token token;
     Object val;
+    Token token;
+
 
     public NumNode(Token token) {
         this.token = token;

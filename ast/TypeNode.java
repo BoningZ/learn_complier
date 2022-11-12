@@ -3,8 +3,9 @@ package ast;
 import token.Token;
 
 public class TypeNode extends ASTNode{
-    Token token;
     Object val;
+    Token token;
+
 
     public TypeNode(Token token) {
         this.token = token;

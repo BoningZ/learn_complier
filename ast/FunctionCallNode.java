@@ -5,11 +5,12 @@ import token.Token;
 import java.util.List;
 
 public class FunctionCallNode extends ASTNode{
+    String functionName;
     Token token;
     List<ASTNode> actualParams;
-    String functionName;
 
-    public FunctionCallNode(Token token, List<ASTNode> actualParams, String functionName) {
+
+    public FunctionCallNode(String functionName, List<ASTNode> actualParams,Token token) {
         this.token = token;
         this.actualParams = actualParams;
         this.functionName = functionName;
