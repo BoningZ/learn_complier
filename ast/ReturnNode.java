@@ -3,9 +3,9 @@ package ast;
 import token.Token;
 
 public class ReturnNode extends ASTNode{
-    String functionName;
-    Token token;
-    ASTNode right;
+    public String functionName;
+    public Token token;
+    public ASTNode right;
 
 
     public ReturnNode(Token token, ASTNode right, String functionName) {

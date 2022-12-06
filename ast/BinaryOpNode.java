@@ -3,9 +3,9 @@ package ast;
 import token.Token;
 
 public class BinaryOpNode extends ASTNode{
-    ASTNode left;
-    Token token,op;
-    ASTNode right;
+    public ASTNode left;
+    public Token token,op;
+    public ASTNode right;
 
     public BinaryOpNode(ASTNode left, Token op, ASTNode right) {
         this.left = left;

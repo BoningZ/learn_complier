@@ -3,11 +3,11 @@ package ast;
 import java.util.List;
 
 public class FunctionDefNode extends ASTNode{
-    String functionName;
-    int offset;
+    public String functionName;
+    public int offset;
     ASTNode type;
-    List<ASTNode> formalParams;
-    ASTNode block;
+    public List<ASTNode> formalParams;
+    public ASTNode block;
 
 
     public FunctionDefNode(ASTNode type, String functionName, List<ASTNode> formalParams, ASTNode block) {

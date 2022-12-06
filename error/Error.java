@@ -32,6 +32,9 @@ public class Error {
         line=token.line; col=token.col;
         this.errorCode=errorCode;
     }
+    public Error(Token token){
+        line=token.line; col=token.col;
+    }
 
 
 }

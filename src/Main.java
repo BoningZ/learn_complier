@@ -16,6 +16,9 @@ public class Main {
     public static ArrayList<String> lines=new ArrayList<>();
     public static String text="";
     public static String fileName="srcProg";
+    public static int OffsetSum=-999;
+    public static int CountI=0;
+    public static String[] paramRegs={"rdi","rsi","rdx","rcx","r8","r9"};
     public static void main(String[] args) throws IOException {
         File file = new File("./"+fileName);
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -27,6 +30,9 @@ public class Main {
         Lexer lexer=new Lexer(text);
         Parser parser=new Parser(lexer);
         List<ASTNode> tree=parser.parse();
-        for(ASTNode astNode:tree)astNode.dfs(0,0);
+        SemanticAnalyzer analyzer=new SemanticAnalyzer();
+        analyzer.analyze(tree);
+        CodeGenerator generator=new CodeGenerator();
+        generator.generate(tree);
     }
 }

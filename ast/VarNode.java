@@ -1,10 +1,12 @@
 package ast;
 
+import symbol.Symbol;
 import token.Token;
 
 public class VarNode extends ASTNode{
-    Object val,symbol;
-    Token token;
+    public Symbol symbol;
+    public Object val;
+    public Token token;
 
 
     public VarNode(Token token) {

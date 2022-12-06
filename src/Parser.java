@@ -247,8 +247,8 @@ public class Parser {
         }
         return params;
     }
-    //FUNCTION_DEF->TYPE_SPEC id()block
-    //              | TYPE_SPEC id(FORMAL_PARAMS)block
+    //FUNCTION_DEF->TYPE_SPEC id()BLOCK
+    //              | TYPE_SPEC id(FORMAL_PARAMS)BLOCK
     ASTNode functionDef(){
         ASTNode typeNode=typeSpec();
         curFunctionName=cur.val.toString();
