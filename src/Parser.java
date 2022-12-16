@@ -96,7 +96,7 @@ public class Parser {
         }
     }
     //RELATIONAL->ADD_SUB RELATIONAL_EXTRA| RELATIONAL RELATIONAL_EXTRA
-    //RELATIONAL_EXTRA-><ADD_SUB|<=ADD_SUB| >ADD_SUB| >=ADD+SUB
+    //RELATIONAL_EXTRA-><ADD_SUB|<=ADD_SUB| >ADD_SUB| >=ADD_SUB
     ASTNode relational(){
         ASTNode node=addSub();
         for(;;){

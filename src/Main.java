@@ -30,6 +30,7 @@ public class Main {
         Lexer lexer=new Lexer(text);
         Parser parser=new Parser(lexer);
         List<ASTNode> tree=parser.parse();
+        //for(ASTNode node:tree)node.dfs(0,0);
         SemanticAnalyzer analyzer=new SemanticAnalyzer();
         analyzer.analyze(tree);
         CodeGenerator generator=new CodeGenerator();

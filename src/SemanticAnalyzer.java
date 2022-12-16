@@ -20,7 +20,7 @@ public class SemanticAnalyzer {
         for(ASTNode node:tree)
             if(node!=null)visit(node);
     }
-    public void visitUnaryOpNode(ASTNode node){}
+    public void visitUnaryOpNode(ASTNode node){visit(((UnaryOpNode)node).right);}
     public void visitReturnNode(ASTNode node){
         visit(((ReturnNode)node).right);
     }

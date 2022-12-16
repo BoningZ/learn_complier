@@ -83,7 +83,7 @@ public class CodeGenerator {
     }
     public void visitAssignNode(ASTNode node){
         AssignNode assignNode=(AssignNode) node;
-        if(((VarNode)assignNode.left).token.type==TK.ID){//var is left=value
+        if(((VarNode)assignNode.left).token.type==TK.ID){//var is left-value
             int varOffset=((VarSymbol)(((VarNode) assignNode.left).symbol)).offset;
             System.out.printf("  lea %d(%%rbp), %%rax\n",varOffset);
             System.out.println("  push %rax");

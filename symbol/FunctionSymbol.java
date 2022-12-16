@@ -15,7 +15,7 @@ public class FunctionSymbol extends Symbol{
     }
     public FunctionSymbol(String name,List<ASTNode> formalParams) {
         super(name);
-        this.formalParams = formalParams;
         if(formalParams==null)formalParams=new ArrayList<>();
+        this.formalParams = formalParams;
     }
 }
